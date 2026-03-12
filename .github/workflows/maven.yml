@@ -8,7 +8,7 @@ on:
 
 env:
   AWS_REGION: ap-south-1                 # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: MY_ECR_REPOSITORY           # set this to your Amazon ECR repository name
+  ECR_REPOSITORY: madhukhande/ecommerce-project          # set this to your Amazon ECR repository name
 
 jobs:
   build:
@@ -48,7 +48,7 @@ jobs:
         id: build-image
         env:
             ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-            IMAGE_TAG: ${{ github.sha }}
+            IMAGE_TAG: latest
         run: |
             # Build a docker container and
             # push it to ECR so that it can
