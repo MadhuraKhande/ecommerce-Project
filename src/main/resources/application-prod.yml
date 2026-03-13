@@ -2,4 +2,4 @@ spring:
   datasource:
     url: jdbc:postgresql://database-1.cl8i8gyq2c5d.ap-south-1.rds.amazonaws.com:5432/myprodDB
     username: postgres
-    password: 1010
+    password: Mymadhura605905
