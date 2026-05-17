@@ -14,10 +14,10 @@ env:
 jobs:
   build:
 
-    runs-on: ubuntu-latest            //  virtual Operating System
+    runs-on: ubuntu-latest            #virtual Operating System
 
     steps:
-      - uses: actions/checkout@v4          //githubcode------>runner machine
+      - uses: actions/checkout@v4          #githubcode------>runner machine
 
       - name: Set up JDK 21
         uses: actions/setup-java@v4
