@@ -2,20 +2,23 @@ package com.example.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import lombok.*;
 
+@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class Product {
-    @Id
-    private int id;
-    private String name;
-    private double price;
 
+    @Id
+    private Integer id;
+
+    @NotBlank(message = "Product name cannot be empty")
+    private String name;
+
+    @Min(value = 1, message = "Price should be greater than 0")
+    private double price;
 }
